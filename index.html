@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gen Z Brain Rot</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <main></main>
+
+    <!-- Click Counter -->
+    <div id="click-counter">
+      Clicks: <span id="click-count">0</span>
+    </div>
+
+    <!-- Subway Surfers Video -->
+    <div id="subway-surfers">
+      <iframe
+        width="300"
+        height="169"
+        src="https://youtu.be/LNmG-zHTeD8"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Reddit AITA Post -->
+    <div id="reddit-post">
+      <iframe
+        id="reddit-embed"
+        src="https://www.reddit.com/r/AmItheAsshole/comments/1iyhia8/aita_for_uninviting_someone_from_my_wedding_after/"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+        style="border: none;"
+        height="500"
+        width="400"
+        scrolling="no">
+      </iframe>
+    </div>
+
+    <!-- Overlay 1 -->
+    <div id="overlay-1" class="overlay hidden">
+      <div class="overlay-content" style="background-color: #ff8c42;">
+        <h1>CLICK IT, CLICK IT!</h1>
+        <p>
+          <a href="https://objkt.com/@distcs" target="_blank" rel="noopener noreferrer"
+            >this is my website</a
+          >
+        </p>
+        <button id="close-overlay-1" class="close-button">Close</button>
+      </div>
+    </div>
+
+    <!-- Overlay 2 -->
+    <div id="overlay-2" class="overlay hidden">
+      <div class="overlay-content" style="background-color: #34eb93;">
+        <h1>ANOTHER BUTTON!</h1>
+        <p>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer"
+            >visit this random link</a
+          >
+        </p>
+        <button id="close-overlay-2" class="close-button">Close</button>
+      </div>
+    </div>
+
+    <!-- Overlay 3 -->
+    <div id="overlay-3" class="overlay hidden">
+      <div class="overlay-content" style="background-color: #c8b8e4;">
+        <h1>ONE MORE BUTTON!</h1>
+        <p>
+          <a href="https://another-example.com" target="_blank" rel="noopener noreferrer"
+            >yet another link</a
+          >
+        </p>
+        <button id="close-overlay-3" class="close-button">Close</button>
+      </div>
+    </div>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>

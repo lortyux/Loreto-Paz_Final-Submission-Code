@@ -1,0 +1,218 @@
+/* General styles */
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Buttons */
+.myButton {
+  position: absolute;
+  background-color: #02178a; /* Default button color */
+  color: white;
+  width: 150px;
+  height: 40px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  animation: shake 0.2s infinite alternate;
+}
+
+.myButton:hover {
+  background-color: #eb8934;
+  font-size: 18px;
+  transform: rotate(5deg);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay for annoying ads */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay-content {
+  padding: 50px;
+  border-radius: 8px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  animation: glitch 0.1s infinite alternate;
+}
+
+.overlay-content h1 {
+  font-size: 24px;
+  font-family: "Arial", sans-serif;
+  animation: flicker 0.5s infinite alternate;
+}
+
+.overlay-content p {
+  font-size: 18px;
+  font-weight: bold;
+  animation: flicker 0.3s infinite alternate;
+}
+
+.overlay-content a {
+  color: #02178a;
+  text-decoration: none;
+}
+
+.overlay-content a:hover {
+  text-decoration: underline;
+}
+
+.close-button {
+  background-color: #02178a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-button:hover {
+  background-color: #eb8934;
+}
+
+/* Random text spam */
+.randomText {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: yellow;
+  text-shadow: 2px 2px red;
+  animation: moveAround 3s infinite alternate ease-in-out;
+}
+
+/* Animations */
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px, 5px);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, 5px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  75% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes moveAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+
+/* Subway Surfers Video */
+#subway-surfers {
+  position: absolute;
+  bottom: 20px; /* Position at the bottom of the screen */
+  right: 20px; /* Position at the right of the screen */
+  z-index: 999; /* Ensure it's above other elements */
+  border: 5px solid #ff0; /* Add a yellow border */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.7); /* Glow effect */
+}
+
+#subway-surfers iframe {
+  width: 300px; /* Set width */
+  height: 169px; /* Set height */
+}
+
+/* Reddit AITA Post */
+#reddit-post {
+  position: absolute;
+  top: 20px; /* Position at the top of the screen */
+  left: 20px; /* Position at the left of the screen */
+  z-index: 999; /* Ensure it's above other elements */
+  border: 5px solid #9DFB17; /* Add a yellow border */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.7); /* Glow effect */
+}
+
+#reddit-post iframe {
+  width: 200px; /* Set width */
+  height: 300px; /* Set height */
+}
+
+/* Click Counter */
+#click-counter {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255,0,0);
+  text-shadow: 2px 2px red;
+  z-index: 1001; /* Ensure it's above other elements */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ED2525; /* Yellow border */
+  box-shadow: 0 0 20px rgba(214,25,25,0.7); /* Glow effect */
+}
+
+/* New Frame for Video (Lower Left Corner) */
+#video-frame {
+  position: absolute;
+  bottom: 20px; /* Position at the bottom of the screen */
+  left: 20px; /* Position at the left of the screen */
+  z-index: 999; /* Ensure it's above other elements */
+  border: 5px solid #00ff00; /* Add a green border */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Glow effect */
+  width: 400px; /* Set width */
+  height: 225px; /* Set height (16:9 aspect ratio for video) */
+}
+
+#video-frame iframe {
+  width: 100%; /* Fill the frame */
+  height: 100%; /* Fill the frame */
+}
